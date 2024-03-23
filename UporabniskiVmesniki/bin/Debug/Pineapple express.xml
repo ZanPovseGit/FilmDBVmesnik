@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Film xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>37</ID>
+  <naslovFilma>Pineapple express</naslovFilma>
+  <opisFilma>A process server and his marijuana dealer wind up on the run from hitmen and a corrupt police officer after he witnesses his dealer's boss murder a competitor while trying to serve papers on him. </opisFilma>
+  <igralci> Seth Rogen, James Franco, Gary Cole</igralci>
+  <direktorji>Seth rogan</direktorji>
+  <pomagači>krneki</pomagači>
+  <potDoSlike>Ikone\express.jpg</potDoSlike>
+  <ID_žanra>1</ID_žanra>
+  <ocenaFilma>5</ocenaFilma>
+</Film>

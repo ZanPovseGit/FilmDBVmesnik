@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UporabiskiVmesniki.resources">
+    <Style x:Key="gumbEna" TargetType="Button">
+        <Setter Property="Background" Value="DarkGray"></Setter> 
+    </Style>
+    <Style x:Key="gumbDva" TargetType="Button">
+        <Setter Property="Background" Value="DimGray"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="gumbTri" TargetType="Button">
+        <Setter Property="Background" Value="Gold"></Setter>
+        <Setter Property="FontStyle" Value="Oblique"></Setter>
+    </Style>
+    
+</ResourceDictionary>

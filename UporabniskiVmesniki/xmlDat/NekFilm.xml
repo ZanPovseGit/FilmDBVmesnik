@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Film>  
+  <ID>3</ID>
+  <naslovFilma>Nek film</naslovFilma>
+  <opisFilma>Nek opis </opisFilma>
+  <igralci> Neki igralci</igralci>
+  <direktorji>neki direktorji</direktorji>
+  <pomagači>neki pomagači</pomagači>
+  <potDoSlike>Ikone\express.jpg</potDoSlike>
+  <ID_žanra>2</ID_žanra>
+  <ocenaFilma>4</ocenaFilma>
+</Film>
+<Film>
+  <ID>4</ID>
+  <naslovFilma>Nek film</naslovFilma>
+  <opisFilma>Nek opis </opisFilma>
+  <igralci> Neki igralci</igralci>
+  <direktorji>neki direktorji</direktorji>
+  <pomagači>neki pomagači</pomagači>
+  <potDoSlike>Ikone\express.jpg</potDoSlike>
+  <ID_žanra>2</ID_žanra>
+  <ocenaFilma>4</ocenaFilma>
+</Film>
+<Film>
+  <ID>5</ID>
+  <naslovFilma>Nek film</naslovFilma>
+  <opisFilma>Nek opis </opisFilma>
+  <igralci> Neki igralci</igralci>
+  <direktorji>neki direktorji</direktorji>
+  <pomagači>neki pomagači</pomagači>
+  <potDoSlike>Ikone\express.jpg</potDoSlike>
+  <ID_žanra>2</ID_žanra>
+  <ocenaFilma>4</ocenaFilma>
+</Film>  
+</ArrayOfFilm>

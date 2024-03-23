@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <ID>24</ID>
+    <naslovFilma>Parasite</naslovFilma>
+    <opisFilma>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan. </opisFilma>
+    <igralci> Kang-ho Song, Sun-kyun Lee, Yeo-jeong Jo</igralci>
+    <direktorji> Bong Joon Ho</direktorji>
+    <pomagači>kreni</pomagači>
+    <potDoSlike>Ikone\parasite.jpg</potDoSlike>
+    <ID_žanra>2</ID_žanra>
+    <ocenaFilma>4</ocenaFilma>
+  </Film>
+  <Film>
+    <ID>37</ID>
+    <naslovFilma>Pineapple express</naslovFilma>
+    <opisFilma>A process server and his marijuana dealer wind up on the run from hitmen and a corrupt police officer after he witnesses his dealer's boss murder a competitor while trying to serve papers on him. </opisFilma>
+    <igralci> Seth Rogen, James Franco, Gary Cole</igralci>
+    <direktorji>Seth rogan</direktorji>
+    <pomagači>krneki</pomagači>
+    <potDoSlike>Ikone\express.jpg</potDoSlike>
+    <ID_žanra>1</ID_žanra>
+    <ocenaFilma>5</ocenaFilma>
+  </Film>
+  <Film>
+    <ID>40</ID>
+    <naslovFilma>Parasite</naslovFilma>
+    <opisFilma>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan. </opisFilma>
+    <igralci> Kang-ho Song, Sun-kyun Lee, Yeo-jeong Jo</igralci>
+    <direktorji> Bong Joon Ho</direktorji>
+    <pomagači>kreni</pomagači>
+    <potDoSlike>Ikone\parasite.jpg</potDoSlike>
+    <ID_žanra>2</ID_žanra>
+    <ocenaFilma>4</ocenaFilma>
+  </Film>
+  <Film>
+    <ID>41</ID>
+    <naslovFilma> aa</naslovFilma>
+    <opisFilma> </opisFilma>
+    <igralci> aa</igralci>
+    <direktorji> aaa</direktorji>
+    <pomagači> aaa</pomagači>
+    <potDoSlike>C:\Users\zan\source\repos\UporabiskiVmesniki\UporabiskiVmesniki\Ikone\3idiots.jpg</potDoSlike>
+    <ID_žanra>3</ID_žanra>
+    <ocenaFilma>3</ocenaFilma>
+  </Film>
+</ArrayOfFilm>

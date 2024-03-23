@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UporabiskiVmesniki.resources">
+    <Style x:Key="listViewEna" TargetType="ListView">
+        <Setter Property="BorderThickness" Value="5"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style x:Key="listViewDva" TargetType="ListView">
+        <Setter Property="BorderThickness" Value="10"></Setter>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+    </Style>
+    <Style x:Key="listViewTri" TargetType="ListView">
+        <Setter Property="BorderThickness" Value="2"></Setter>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+        <Setter Property="Cursor" Value="Cross"></Setter>
+    </Style>
+
+</ResourceDictionary>

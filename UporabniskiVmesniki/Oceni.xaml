@@ -1,0 +1,15 @@
+﻿<Window x:Class="UporabiskiVmesniki.Oceni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UporabiskiVmesniki"
+        mc:Ignorable="d"
+        Title="Oceni" Height="313.889" Width="613.889">
+    <Grid>
+        
+        <local:UserControl1 >
+        </local:UserControl1>
+
+    </Grid>
+</Window>

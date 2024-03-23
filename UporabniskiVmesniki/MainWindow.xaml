@@ -1,0 +1,159 @@
+﻿<Window x:Class="UporabiskiVmesniki.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UporabiskiVmesniki"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="989.286" Width="1153.134">
+    <Window.Resources>
+        <Style x:Key="triggerr" TargetType="CheckBox">
+            <Setter Property="Foreground" Value="Black"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=triger,Path=IsChecked}" Value="true" >
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Background="DarkGray" Margin="0,0,0,3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="180*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="771*"/>
+            <ColumnDefinition Width="374*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="Black"/>
+
+        <Border Grid.Column="1" Background="Black"/>
+        <Border Grid.Column="2" Grid.Row="2" Background="DimGray"/>
+        <Image HorizontalAlignment="Left" Height="95" Margin="10,11,0,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.667,0.475" Source="Ikone\imdb1.png"/>
+        <TextBox HorizontalAlignment="Left" Height="39" Margin="180,11,0,0" TextWrapping="Wrap" FontSize="23" VerticalAlignment="Top" Width="431"/>
+        <Menu HorizontalAlignment="Left" Height="707" Margin="8,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="360" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Menu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.01"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Menu.RenderTransform>
+            <ListView x:FieldModifier="public" Style="{StaticResource listViewEna}" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="350" Name="listView" SelectionChanged="Selector_OnSelectionChanged" 
+                  ItemsSource="{Binding}" SourceUpdated="listView_SourceUpdated" >
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Pokazi filme" Click="MenuItem_Click"     />
+                        <MenuItem Header="Oceni " Click="MenuItem_Click_1" />
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel  Orientation="Horizontal">
+                                <CheckBox Style="{StaticResource triggerr}" Content="Favorit" Name="triger"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Naslov Filma: "/>
+                                <TextBlock Text="{Binding naslovFilma}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Igralci Filma: "/>
+                                <TextBlock Text="{Binding igralci}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="150" Width="150" Source="{Binding potDoSlike}" Stretch="Fill"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <MenuItem Header="Datoteka" Height="138" Width="360">
+                <Button Content="Uvozi" Width="266" Height="40" Click="Button_Click_7"/>
+                <Label Content="Label" Height="14" Width="265"/>
+                <Button Content="Izvozi" Width="266" Height="40" Click="Button_Click_6"/>
+            </MenuItem>
+        </Menu>
+        <ComboBox HorizontalAlignment="Left" Height="39" Margin="611,11,0,0" VerticalAlignment="Top" Width="90">
+            <ComboBoxItem Content="Sortiranje po imenu" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="Sortiranje po oceni" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="Sortiranje po letu" HorizontalAlignment="Left" Width="92"/>
+        </ComboBox>
+        <Button Content="Išči" HorizontalAlignment="Left" Height="39" Margin="701,11,0,0" VerticalAlignment="Top" Width="63"/>
+        <Label Content="3 Idiots (2009)" HorizontalAlignment="Left" Height="85" Grid.Row="2" VerticalAlignment="Top" Width="563" Margin="10,10,0,0" Name="labelFilmNaslov" FontSize="60"/>
+        <Image HorizontalAlignment="Left" Height="256" Margin="10,115,0,0" Grid.Row="2" VerticalAlignment="Top" Width="296" Name="imageFIlm" Source="Ikone\3idiots.jpg" Stretch="Fill"/>
+        <MediaElement HorizontalAlignment="Left" Height="256" Margin="322,115,0,0" Grid.Row="2" VerticalAlignment="Top" Width="431"  Name="mePlayer" Source="Ikone\3idiots.mpg"/>
+        <TextBlock Background="White" HorizontalAlignment="Left" Height="63" Margin="10,414,0,0" Grid.Row="2" TextWrapping="Wrap" Name="OpisFilma" Text="Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them &quot;idiots&quot;. " VerticalAlignment="Top" Width="743"/>
+        <ContentControl  x:Name="UserControlContainer" HorizontalAlignment="Left" Margin="181,623,0,0" VerticalAlignment="Top" Width="572" Height="189" Grid.Row="2" MouseLeave="UserControlContainer_MouseLeave">
+            <local:UserControl1 Loaded="UserControl1_Loaded_1"/>
+        </ContentControl>
+
+
+        <Label Style="{StaticResource labelTri}" Content="Direktorji" FontSize="16" Background="White" FontWeight="SemiBold" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="34" Margin="10,490,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135"/>
+        <Label Style="{StaticResource labelTri}" Content="Igralci" FontSize="16" FontWeight="SemiBold" Background="White" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="31" Margin="10,538,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135"/>
+        <Label Style="{StaticResource labelTri}" Content="Pomagači" FontWeight="SemiBold" FontSize="16" Background="white" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="30" Margin="10,582,0,0" Grid.Row="2" VerticalAlignment="Top" Width="135"/>
+        <ComboBox Style="{StaticResource box}" HorizontalAlignment="Left" Height="50" Margin="180,56,0,0" VerticalAlignment="Top" Width="160" Text="TV Serije"/>
+        <ComboBox Style="{StaticResource box}" HorizontalAlignment="Left" Height="50" Margin="399,56,0,0" VerticalAlignment="Top" Width="162"/>
+        <StatusBar HorizontalAlignment="Left" Height="44" Margin="150,485,0,0" Grid.Row="2" VerticalAlignment="Top" Width="603">
+            <StatusBarItem Content=" Rajkumar Hirani" Height="36" VerticalAlignment="Top" Name="direktorFilma" Margin="0,4,0,0"/>
+        </StatusBar>
+        <StatusBar HorizontalAlignment="Left" Height="47" Margin="150,529,0,0" Grid.Row="2" VerticalAlignment="Top" Width="603">
+            <StatusBarItem Content=" Aamir Khan, Madhavan, Mona Singh" Height="47" VerticalAlignment="Top" Name="igralciFilma"/>
+        </StatusBar>
+        <StatusBar HorizontalAlignment="Left" Height="42" Margin="150,576,0,0" Grid.Row="2" VerticalAlignment="Top" Width="603">
+            <StatusBarItem Content="Jože Ponevič" Height="42" VerticalAlignment="Top" Name="pomagačiFilma"/>
+        </StatusBar>
+        <StatusBar Background="white" BorderBrush="DimGray" BorderThickness="2" HorizontalAlignment="Left" Height="85" Margin="578,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="175">
+            <Image Height="75" Width="71"  Source="Ikone\star.png"/>
+            <Label Content="2/5" Height="75" Width="62" Name="ocena" FontSize="23"/>
+        </StatusBar>
+        <Button Grid.Column="1" HorizontalAlignment="Left" Margin="335,-23,0,0" VerticalAlignment="Top" Width="29" Height="23" Click="Button_Click" RenderTransformOrigin="0.167,2.521">
+            <Button.Background>
+                <ImageBrush ImageSource="Ikone\close.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="24,648,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" Height="51" Grid.Row="2">
+            <Button.Background >
+                <ImageBrush  ImageSource="Ikone\zbrisi.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="277,648,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Height="51" Grid.Row="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Ikone\ikonaDodaj.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource gumbEna}" Content="Odpri meni Žanrov" Grid.Column="1" HorizontalAlignment="Left" Margin="131,649,0,0" VerticalAlignment="Top" Width="113" Height="50" Click="Button_Click_3" Grid.Row="2"/>
+        <Button Style="{StaticResource gumbDva}" Content="Spreminjaj podatke filma" HorizontalAlignment="Left" Margin="12,623,0,0" VerticalAlignment="Top" Width="157" Height="189" Click="Button_Click_4" Grid.Row="2"/>
+
+        <ComboBox Style="{StaticResource box}" HorizontalAlignment="Left" Margin="623,56,0,0" VerticalAlignment="Top" Width="138" Height="50"/>
+        <GridSplitter Background="Black" HorizontalAlignment="Left" Height="744" Margin="379,159,0,-176" Grid.Row="2" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5">
+
+
+
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.052"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+        <GridSplitter Background="Black" HorizontalAlignment="Left" Height="742" Margin="379,208,0,-223" Grid.Row="2" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5">
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.988"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+        <TextBlock HorizontalAlignment="Left" Margin="10,387,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Opis filma" Background="White" FontSize="16" FontFamily="Times New Roman" FontWeight="SemiBold" VerticalAlignment="Top" Height="22" Width="93"/>
+
+    </Grid>
+</Window>

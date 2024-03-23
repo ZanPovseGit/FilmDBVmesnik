@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="UporabiskiVmesniki.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UporabiskiVmesniki"
+             mc:Ignorable="d" Height="192" Width="561.333">
+    <Grid HorizontalAlignment="Left" Width="562" Margin="0,0,-1,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Expander Header="Filmi za oceno" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="560" Margin="0,0,0,-28" Expanded="Expander_Expanded">
+            <WrapPanel Background="DimGray">
+
+                <ListView Name="lista" Style="{StaticResource list}" ItemsSource = "{Binding}" HorizontalAlignment="Left" Height="98" Margin="100,14,0,-13" VerticalAlignment="Top" Width="141">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <ComboBox Style="{StaticResource box}" x:Name="cbox" HorizontalAlignment="Left" Height="40" Margin="137,10,0,0" VerticalAlignment="Top" Width="124">
+                    <ComboBoxItem Content="1 Zvezdica" HorizontalAlignment="Left" Width="256"/>
+                    <ComboBoxItem Content="2 Zvezdica" HorizontalAlignment="Left" Width="256"/>
+                    <ComboBoxItem Content="3 Zvezdica" HorizontalAlignment="Left" Width="256"/>
+                    <ComboBoxItem Content="4 Zvezdica" HorizontalAlignment="Left" Width="256"/>
+                    <ComboBoxItem Content="5 Zvezdica" HorizontalAlignment="Left" Width="256"/>
+                </ComboBox>
+                <Label Name="ocena" FontWeight="Bold" Width="241" Height="26"/>
+                <Button Style="{StaticResource gumb}" Content="Oceni Film" HorizontalAlignment="Left" Click="Button_Click" Height="47" Width="146"/>
+                <Label/>
+                <Button Style="{StaticResource gumb}" Content="Prikazi" HorizontalAlignment="Left" Height="47" Width="118" Click="Button_Click_1" />
+            </WrapPanel>
+        </Expander>
+    </Grid>
+</UserControl>

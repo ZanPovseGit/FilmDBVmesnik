@@ -1,0 +1,17 @@
+﻿<Application x:Class="UporabiskiVmesniki.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UporabiskiVmesniki"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/Izgled.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="resources/gumb.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="resources/label.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="resources/listView.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="resources/image.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
